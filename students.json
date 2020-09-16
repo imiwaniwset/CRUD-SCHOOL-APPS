@@ -1,0 +1,33 @@
+[{
+    "id": 1,
+    "first_name": "Joko",
+    "last_name": "Santoso",
+    "email": "jokosantoso@mail.com",
+    "gender": "male",
+    "birth_date": "28-06-2005"
+  },
+  {
+    "id": 2,
+    "first_name": "Lukman",
+    "last_name": "Riki",
+    "email": "lukmanriki@mail.com",
+    "gender": "male",
+    "birth_date": "13-04-2004"
+  },
+  {
+    "id": 3,
+    "first_name": "Siti",
+    "last_name": "Nurhayati",
+    "email": "sitinurhayati@mail.com",
+    "gender": "female",
+    "birth_date": "12-05-2005"
+  },
+  {
+    "id": 4,
+    "first_name": "Rika",
+    "last_name": "Risti",
+    "email": "rikaristi@mail.com",
+    "gender": "female",
+    "birth_date": "03-01-2005"
+  }
+]
