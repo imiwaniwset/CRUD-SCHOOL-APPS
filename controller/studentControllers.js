@@ -68,6 +68,7 @@ class Controller {
                 if (err) {
                     res.send(err);
                 } else {
+
                     res.redirect('/students')
                 }
             })
@@ -120,7 +121,7 @@ class Controller {
         };
         const errors = Controller.validate(student)
         if (errors.length > 0) {
-            res.redirect('./students/add?errors=' + errors.join(','))
+            res.redirect('./edit?errors=' + errors.join(' ,'))
         } else {
             Student.update(student, (err, data) => {
                 if (err) {

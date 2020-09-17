@@ -1,9 +1,10 @@
 <%- include('partial/header') %>
 <%- include('partial/navbar') %>
 <br>
-<form action="/students/add" method="POST">
-
-    <%= errors %><br>
+<form action="/students/add" method="POST"><br>
+    <div class="alert alert-danger" role="alert">
+        <%= errors %>
+    </div>
 
     <div class="form-group row">
         <label for="inputEmail3" class="col-sm-2 col-form-label"> First Name</label>
@@ -48,5 +49,6 @@
             <button type="submit" class="btn btn-primary">Add Student</button>
         </div>
     </div>
+
 </form>
 <%- include('partial/footer') %>
