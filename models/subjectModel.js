@@ -22,6 +22,19 @@ class Subject {
 
         })
     }
+
+    static findById(idSubject, cb) {
+        let query = `SELECT * FROM "Subjects" WHERE id = '${idSubject}'`;
+        database.query(query, (err, res) => {
+            if (err) {
+                cb(err, null);
+            } else {
+                cb(null, res.rows)
+            }
+        })
+    }
 }
+
+
 
 module.exports = Subject

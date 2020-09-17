@@ -39,7 +39,7 @@ class Controller {
 
 
     static FormAddStudent(req, res) {
-        const errors = req.query.errors
+        const errors = req.query.errors || null
         res.render('addStudent', {
             errors
         })
@@ -94,7 +94,7 @@ class Controller {
             if (err) {
                 res.render(err)
             } else {
-                const errors = req.query.errors
+                const errors = req.query.errors || null
                 res.render('updateForm', {
                     students,
                     errors

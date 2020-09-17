@@ -17,7 +17,7 @@ class TeachersController {
 
     static findIdTeacher(req, res) {
         let idTeacher = req.params.id
-        Teacher.findId(idTeacher, (err, data) => {
+        Teacher.findById(idTeacher, (err, data) => {
             if (err) {
                 res.render('error', {
                     err

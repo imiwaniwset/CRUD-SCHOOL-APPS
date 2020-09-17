@@ -1,5 +1,5 @@
 const pool = require('./connection')
-
+// BIRTH DATE BELUM Diganti Date
 const tableStudent = `
 DROP TABLE IF EXISTS "Students";
 CREATE TABLE IF NOT EXISTS "Students" (
@@ -8,7 +8,7 @@ CREATE TABLE IF NOT EXISTS "Students" (
 "last_name" VARCHAR NOT NULL,
 "email" VARCHAR NOT NULL,
 "gender" VARCHAR NOT NULL,
-"birth_date" VARCHAR
+"birth_date" VARCHAR 
 );
 `
 

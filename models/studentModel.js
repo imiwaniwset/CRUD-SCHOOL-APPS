@@ -1,4 +1,7 @@
 const database = require('../config/connection')
+const {
+    get
+} = require('../routes/subjectRoute')
 
 
 class Student {
@@ -8,8 +11,23 @@ class Student {
         this.last_name = last_name
         this.email = email
         this.gender = gender
-        this.birth_date = birth_date
+        this.birth_date = new Date(this.getDate)
 
+    }
+
+    getDate() {
+        let d = new Date(date),
+            month = '' + (d.getMonth() + 1),
+            day = '' + d.getDate(),
+            year = d.getFullYear();
+
+        if (month.length < 2)
+            month = '0' + month;
+        if (day.length < 2)
+            day = '0' + day;
+
+        let rightDate = [year, month, day].join('-');
+        return rightDate
     }
 
     static showStudent(cb) {

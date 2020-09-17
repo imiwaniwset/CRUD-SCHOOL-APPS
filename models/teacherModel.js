@@ -26,6 +26,17 @@ class Teacher {
 
         })
     }
+
+    static findById(idTeacher, cb) {
+        let query = `SELECT * FROM "Teachers" WHERE id = '${idTeacher}'`;
+        database.query(query, (err, res) => {
+            if (err) {
+                cb(err, null);
+            } else {
+                cb(null, res.rows)
+            }
+        })
+    }
 }
 
 module.exports = Teacher

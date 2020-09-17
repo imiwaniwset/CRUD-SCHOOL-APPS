@@ -17,7 +17,7 @@ class SubjectController {
 
     static findIdSubject(req, res) {
         let idSubject = req.params.id
-        Subject.findIdSubject(idSubject, (err, data) => {
+        Subject.findById(idSubject, (err, data) => {
             if (err) {
                 res.render('error', {
                     err
