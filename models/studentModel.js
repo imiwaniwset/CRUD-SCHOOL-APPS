@@ -11,7 +11,7 @@ class Student {
         this.last_name = last_name
         this.email = email
         this.gender = gender
-        this.birth_date = new Date(this.getDate)
+        this.birth_date = birth_date
 
     }
 
