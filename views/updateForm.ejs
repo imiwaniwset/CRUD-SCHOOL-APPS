@@ -1,55 +1,79 @@
-<%- include('partial/header') %>
-<%- include('partial/navbar') %>
+<%- include('partial/header') %> <%- include('partial/navbar') %>
 
 <form action="/students/<%= students.id %>/edit" method="POST">
-    <div class="alert alert-danger" role="alert">
-        <%= errors %>
-    </div>
+  <div class="alert alert-danger" role="alert"><%= errors %></div>
 
-    <div class="form-group row">
-        <label for="inputEmail3" class="col-sm-2 col-form-label"> First Name</label>
-        <div class="col-sm-10">
-            <input type="text" name="first_name" class="form-control" value=<%= students.first_name %> id="inputEmail3"
-                placeholder="Insert Your First Name..">
-        </div>
+  <div class="form-group row">
+    <label for="inputEmail3" class="col-sm-2 col-form-label"> First Name</label>
+    <div class="col-sm-10">
+      <input
+        type="text"
+        name="first_name"
+        class="form-control"
+        value="<%"
+        ="students.first_name"
+        %
+      />
+      id="inputEmail3" placeholder="Insert Your First Name..">
     </div>
-    <div class="form-group row">
-        <label for="inputPassword3" class="col-sm-2 col-form-label">Last Name</label>
-        <div class="col-sm-10">
-            <input type="text" name="last_name" class="form-control" value=<%= students.last_name %> id="inputPassword3"
-                placeholder="Insert Your Last Name..">
-        </div>
+  </div>
+  <div class="form-group row">
+    <label for="inputPassword3" class="col-sm-2 col-form-label"
+      >Last Name</label
+    >
+    <div class="col-sm-10">
+      <input
+        type="text"
+        name="last_name"
+        class="form-control"
+        value="<%=students.last_name"
+        %
+      />
+      % /> id="inputPassword3" placeholder="Insert Your Last Name..">
     </div>
-    <div class="form-group row">
-        <label for="inputPassword3" class="col-sm-2 col-form-label">Email</label>
-        <div class="col-sm-10">
-            <input type="email" name="email" class="form-control" value=<%= students.email %> id="inputPassword3"
-                placeholder="Insert Your Email..">
-        </div>
+  </div>
+  <div class="form-group row">
+    <label for="inputPassword3" class="col-sm-2 col-form-label">Email</label>
+    <div class="col-sm-10">
+      <input
+        type="email"
+        name="email"
+        class="form-control"
+        value="<%"
+        ="students.email"
+        %
+      />
+      id="inputPassword3" placeholder="Insert Your Email..">
     </div>
-    <div class="form-group row">
-        <label for="inputPassword3" class="col-sm-2 col-form-label">Birth Date</label>
-        <div class="col-sm-10">
-            <select class="custom-select" name="gender">
-                <option selected>Choose One</option>
-                <option value="male">Male</option>
-                <option value="female">Female</option>
-            </select>
-        </div>
+  </div>
+  <div class="form-group row">
+    <label for="inputPassword3" class="col-sm-2 col-form-label"
+      >Birth Date</label
+    >
+    <div class="col-sm-10">
+      <select class="custom-select" name="gender">
+        <option selected>Choose One</option>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+      </select>
     </div>
+  </div>
 
-    <div class="form-group row">
-        <label for="inputPassword3" class="col-sm-2 col-form-label">Birth Date</label>
-        <div class="col-sm-10">
-            <input type="date" name="birth_date" class="form-control" value=<%= students.birth_date %>
-                id="inputPassword3" placeholder="Insert Your Birth Date">
-        </div>
+  <div class="form-group row">
+    <label for="inputPassword3" class="col-sm-2 col-form-label"
+      >Birth Date</label
+    >
+    <div class="col-sm-10">
+      <input type="date" name="birth_date" class="form-control" value="<%
+      ="students.birth_date" % id="inputPassword3" placeholder="Insert Your
+      Birth Date" /> />
     </div>
-    <div class="form-group row">
-        <div class="col-sm-10">
-            <button type="submit" class="btn btn-primary">Update Student</button>
-        </div>
+  </div>
+  <div class="form-group row">
+    <div class="col-sm-10">
+      <button type="submit" class="btn btn-primary">Update Student</button>
     </div>
+  </div>
 </form>
 
 <%- include('partial/footer') %>
